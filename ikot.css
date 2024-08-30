@@ -1,0 +1,23 @@
+body {
+	background-color: #f0c77a;
+}
+
+.cert-text{
+    color: rgb(23, 23, 23);
+    display: flex;
+    left: 50vw;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cert{
+    display: flex;
+    transition: transform 400ms ease-in-out;
+}
+.cert:hover {
+	transform: scale(1.15);
+}
