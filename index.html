@@ -16,8 +16,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="callbtn.js"></script>
   <script src="script.js"></script>
+  <script src="reviews.js"></script>
+  <link rel="stylesheet" href="reviews.css">
 <link rel="icon" href="HDs_logo_edited.png">
   <title>HomeDent</title>
+
 </head>
 
 <body>
@@ -26,7 +29,7 @@
     <div class="nav-brand">
       <a href="#home"><img src="HDs_logo_edited.png"></a>
     </div>
-    <i class="fa fa-bars fa-4x"></i>
+    <i class="fa fa-bars fa-3x"></i>
     <div class="header-links">
       <ul>
         <li data-menuanchor="fifthPage"><a href="#contact">КОНТАКТ</a></li>
@@ -80,8 +83,6 @@
 
   <div id="fullpage">
 
-    <!-- begin section -->
-
     <div class="section aboutme" data-anchor="aboutme">
       <div class="opaque-bg animated fadeInDown">
         <!-- <h1 style="color:white">HOME<span style="color:#ffd863">/</span>DENT</h1> -->
@@ -90,12 +91,11 @@
       </div>
       <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
     </div>
-    <!-- end section -->
-
     <!-- begin section -->
 
-    <div class="section abtBG" data-anchor="skills">
-      <div class="content">
+    <div class="section" data-anchor="skills">
+<div class="abtBG"></div>
+      <div class="content onas_content">
         <h1 class="fadeInDown animate__delay-0.2s onas-bold" data-wow-delay="0.2s">ПРО НАС</h1>
         <p class="fadeInDown animate__delay-0.2s onas" data-wow-delay="0.2s">Ми раді вітати вас у нашій затишній домашній стоматології HomeDent.
 
@@ -103,9 +103,11 @@
           
           Наша мета - привести посмішку наших пацієнтів у відповідність до їх очікувань.</p>
       </div>
+	  
     </div>
     <!-- end section -->
 
+    <!-- end section -->
     <!-- begin section -->
 
     <div class="section" data-anchor="projects">
@@ -151,63 +153,134 @@
 
     <!-- begin section -->
     <div class="section" data-anchor="doctors">
-      <div class="content">
+      <div class="content doctors_content">
+		<div id = "doc1" class="doctors_section">
+			<div class = "doc_desc">
+				<p class = "doc_name">Ірина Петрівна Котюк</p>
+				<p class = "doc_name_desc">Ортодонт</p>
+				<p class = "doc_name_desc">Ортодонтичне лікування дітей та дорослих</p>
+			</div> 
+			<div class="doc_image">
+				<img class="doc_photo" src="IrinaKot.jpg">
+				<div class="doc_arrows">
+					<div class="doc_arrow_l" onclick="prev_photo()"><p class="doc_arr_text">&lt;</p></div>
+					<div class="doc_arrow_r" onclick="next_photo()"><p class="doc_arr_text">&gt;</p></div>
+				</div>
+			</div>
+		</div>
+		<div id = "doc2" class="doctors_section" style="display: none;">
+			<div class = "doc_desc">
+				<p class = "doc_name">Вікторія Станіславівна Шандрук</p>
+				<p class = "doc_name_desc">Ортодонт</p>
+				<p class = "doc_name_desc">Ортодонтичне лікування дітей та дорослих</p>
+			</div> 
+			<div class="doc_image">
+				<img class="doc_photo" src="vik.jpg">
+				<div class="doc_arrows">
+					<div class="doc_arrow_l" onclick="prev_photo()"><p class="doc_arr_text">&lt;</p></div>
+					<div class="doc_arrow_r" onclick="next_photo()"><p class="doc_arr_text">&gt;</p></div>
+				</div>
+			</div>
+		</div>
+		<div id = "doc3" class="doctors_section" style="display: none;">
+			<div class = "doc_desc">
+				<p class = "doc_name">Костянтин Миколайович Безносюк</p>
+				<p class = "doc_name_desc">Стоматолог, Стоматолог-ортопед</p>
+				<p class = "doc_name_desc">Лікування та протезування зубів будь-якої складності, професійна чистка зубів, відбілювання</p>
+			</div> 
+			<div class="doc_image">
+				<img class="doc_photo" src="kostantin.jpg">
+				<div class="doc_arrows">
+					<div class="doc_arrow_l" onclick="prev_photo()"><p class="doc_arr_text">&lt;</p></div>
+					<div class="doc_arrow_r" onclick="next_photo()"><p class="doc_arr_text">&gt;</p></div>
+				</div>
+			</div>
+		</div>
+
         <!-- <h1 class="fadeInDown animate__delay-0.2s" data-wow-delay="0.2s">О НАС</h1> -->
         <!-- <p class="fadeInDown animate__delay-0.2s" data-wow-delay="0.2s">БЛАБЛАБЛА</p> -->
-        <div class = "cards">
-          <div>
-            <div class="card">
-              <img src="IrinaKot.jpg" class = "card__image card__image_center" alt="IrinaKotiuk">
-              <div class="card__overlay">
-                <div class="card__header">
-                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                    <path />
-                  </svg>
-                  <div class="card__header-text">
-                    <h3 class="card__title">Ірина Петрівна Котюк</h3>
-                    <span class="card__status">Ортодонт</span>
-                  </div>
-                </div>
-                <p class="card__desc">Ортодонтичне лікування дітей та дорослих</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card">
-              <img src="vik.jpg" class = "card__image card__image_center" alt="viktoria">
-              <div class="card__overlay">
-                <div class="card__header">
-                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                    <path />
-                  </svg>
-                  <div class="card__header-text">
-                    <h3 class="card__title">Вікторія Станіславівна Шандрук</h3>
-                    <span class="card__status">Ортодонт</span>
-                  </div>
-                </div>
-                <p class="card__desc">Ортодонтичне лікування дітей та дорослих</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card">
-              <img src="kostantin.jpg" class = "card__image card__image_center" alt="konstantin">
-              <div class="card__overlay">
-                <div class="card__header">
-                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                    <path />
-                  </svg>
-                  <div class="card__header-text">
-                    <h3 class="card__title">Костянтин Миколайович Безносюк</h3>
-                    <span class="card__status">Стоматолог, Стоматолог-ортопед</span>
-                  </div>
-                </div>
-                <p class="card__desc">Лікування та протезування зубів будь-якої складності, професійна чистка зубів, відбілювання</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- <div class = "cards"> -->
+        <!--   <div> -->
+        <!--     <div class="card"> -->
+        <!--       <img src="IrinaKot.jpg" class = "card__image card__image_center" alt="IrinaKotiuk"> -->
+        <!--       <div class="card__overlay"> -->
+        <!--         <div class="card__header"> -->
+        <!--           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"> -->
+        <!--             <path /> -->
+        <!--           </svg> -->
+        <!--           <div class="card__header-text"> -->
+        <!--             <h3 class="card__title">Ірина Петрівна Котюк</h3> -->
+        <!--             <span class="card__status">Ортодонт</span> -->
+        <!--           </div> -->
+        <!--         </div> -->
+        <!--         <p class="card__desc">Ортодонтичне лікування дітей та дорослих</p> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <div class="card"> -->
+        <!--       <img src="vik.jpg" class = "card__image card__image_center" alt="viktoria"> -->
+        <!--       <div class="card__overlay"> -->
+        <!--         <div class="card__header"> -->
+        <!--           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"> -->
+        <!--             <path /> -->
+        <!--           </svg> -->
+        <!--           <div class="card__header-text"> -->
+        <!--             <h3 class="card__title">Вікторія Станіславівна Шандрук</h3> -->
+        <!--             <span class="card__status">Ортодонт</span> -->
+        <!--           </div> -->
+        <!--         </div> -->
+        <!--         <p class="card__desc">Ортодонтичне лікування дітей та дорослих</p> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <div class="card"> -->
+        <!--       <img src="kostantin.jpg" class = "card__image card__image_center" alt="konstantin"> -->
+        <!--       <div class="card__overlay"> -->
+        <!--         <div class="card__header"> -->
+        <!--           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"> -->
+        <!--             <path /> -->
+        <!--           </svg> -->
+        <!--           <div class="card__header-text"> -->
+        <!--             <h3 class="card__title">Костянтин Миколайович Безносюк</h3> -->
+        <!--             <span class="card__status">Стоматолог, Стоматолог-ортопед</span> -->
+        <!--           </div> -->
+        <!--         </div> -->
+        <!--         <p class="card__desc">Лікування та протезування зубів будь-якої складності, професійна чистка зубів, відбілювання</p> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
       </div>
+    </div>
+	<div class="section reviews" data-anchor="reviews">
+      <div class="opaque-bg animated fadeInDown doctors_content reviews_content">
+        <!-- <h1 style="color:white">HOME<span style="color:#ffd863">/</span>DENT</h1> -->
+        <div class="content-wrapper">
+		<!-- <h1>Our Reviews</h1> -->
+		<!-- <div class="blue-line"></div> -->
+		<div class="wrapper-for-arrows">
+			<div style="opacity: 0;" class="chicken"></div>
+			<div id="reviewWrap" class="review-wrap">
+				<div id="imgDiv" class="">
+				</div>
+				<div id="personName"></div>
+				<div id="profession"></div>
+				<div id="description">
+				</div>
+			</div>
+			<div class="left-arrow-wrap arrow-wrap">
+				<div class="arrow" id="leftArrow"></div>
+			</div>
+			<div class="right-arrow-wrap arrow-wrap">
+				<div class="arrow" id="rightArrow"></div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>        <!-- <p><span id="holder"></span><span class="blinking-cursor">|</span></p> -->
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
     </div>
     <div class="section" data-anchor="contact">
       <div class="content fadeInDown" data-wow-delay="0.2s">

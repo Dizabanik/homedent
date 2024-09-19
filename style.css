@@ -82,7 +82,71 @@ p {
 
 /* nav header links */
 
+.doctors_section {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100vw;
+	height: 90vh;
+	bottom: 0;
+}
+.doc_desc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50vw;
+}
+.doc_image {
+	height: 90vh;
+	overflow: hidden;
+	width: 50vw;
+}
 
+.doc_arrows {
+	z-index: 100;
+	position: absolute;
+	top: 5vh;
+	width: 220px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+}
+.doc_arrows:hover {
+	cursor: pointer;
+
+}
+.doc_arrow_l {
+	width: 100px;
+	height: 100px;
+	background-color: #f7f0d7;
+}
+.doc_arrow_r {
+	width: 100px;
+	height: 100px;
+	background-color: #f7f0d7;
+}
+.doc_arr_text {
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+	margin: 0;
+	font-size: 50px;
+
+
+	height: 100%;
+	width: 100%;
+	margin-top: 25%;
+	/* color: black; */
+	text-align: center;
+}
 .cards{
   display: flex;
   /* flex-wrap: wrap; */
@@ -335,7 +399,14 @@ p {
   background-size: cover;
 }
 .abtBG {
-
+	position: absolute;
+	margin: 0;
+	right: 0;
+	z-index: 1 !important;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.5;
 background: url("inst.png")
     no-repeat;
 background-size: cover;
@@ -344,6 +415,10 @@ background-size: cover;
 	color: #FFDC00;
 	font-family: Montserrat;
 	font-weight: 800;
+}
+.onas_content {
+	position: relative;
+  z-index: 99 !important;
 }
 .aboutme p {
   color: white;
@@ -578,6 +653,10 @@ box-shadow: 0px 0px 5px #555;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
+}
+.doctors_content {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .content-slide {
@@ -868,6 +947,29 @@ label {
 .google-iframe {
 	width: 100%;
 }
+@media (min-width: 100px) and (max-width: 840px) {
+.doc_arrows {
+	z-index: 100;
+	position: absolute;
+	top: 5vh;
+	width: 150px;
+}
+
+.doc_arrow_l {
+	width: 70px;
+	height: 70px;
+
+}
+.doc_arrow_r {
+	width: 70px;
+	height: 70px;
+
+}
+.doc_arr_text {
+
+	font-size: 35px;
+}
+}
 @media (min-width: 100px) and (max-width: 610px) {
 	.card__title {
 		font-size: 10px;
@@ -907,6 +1009,30 @@ label {
 	.card__header{
 		border-radius: 0px;
 	}
+}
+@media (orientation:landscape) {
+.doc_photo {
+	width: 50vw;
+}
+.doc_name {
+	width: 50vw;
+	font-size: 3vw;
+}
+.doc_name_desc {
+	font-size: 1.5vw;
+}
+}
+@media (orientation:portrait) {
+.doc_photo {
+	height: 100vh;
+}
+.doc_name {
+width: 50vw;
+	font-size: 4vh;
+}
+.doc_name_desc {
+	font-size: 2.5vh;
+}
 }
 @media (orientation:portrait) and (max-height: 900px){
 	.product-card {

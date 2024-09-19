@@ -5,8 +5,28 @@ function float_phone_click () {
 	var temp2 = document.querySelector('.float_popup');
 	temp2.classList.toggle('fp_closed');
 }
-
+let curPhoto = 1;
+let photoPrev;
+function prev_photo(){
+	curPhoto -= 1;
+	if(curPhoto == 0) {
+		curPhoto = 3;
+	}
+	photoPrev.style.display = 'none';
+	photoPrev = document.getElementById("doc"+curPhoto);
+	photoPrev.style.display = 'flex';
+}
+function next_photo(){
+	curPhoto += 1;
+	if(curPhoto == 4) {
+		curPhoto = 1;
+	}
+	photoPrev.style.display = 'none';
+	photoPrev = document.getElementById("doc"+curPhoto);
+	photoPrev.style.display = 'flex';
+}
 $(document).ready(function () {
+	photoPrev = document.getElementById("doc1");
   // typing animation
   (function ($) {
     $.fn.writeText = function (content) {
@@ -87,8 +107,8 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 100,
     navigation: true,
-    navigationTooltips: ["головна", "о нас", "послуги", "лікарі", "контакт"],
-    anchors: ["home", "about", "portfolio", "doctors", "contact"],
+    navigationTooltips: ["головна", "о нас", "послуги", "лікарі", "відгуки", "контакт"],
+    anchors: ["home", "about", "portfolio", "doctors", "reviews", "contact"],
     menu: "#myMenu",
     fitToSection: true,
 
