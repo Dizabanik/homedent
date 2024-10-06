@@ -170,7 +170,7 @@ user-select: none; /* Standard */
 }
 .imgr_t {
 	border-radius: 20px;
-	width: 40vw;
+	height: 40vw;
 }
 .imgr_o {
 	width: 50vw;
