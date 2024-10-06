@@ -1,3 +1,10 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin-top: 70px;
+}
 .service-row {
 	margin-bottom: 100px;
 }

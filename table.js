@@ -58,97 +58,97 @@ $(document).ready(function () {
 
   // initiate full page scroll
 
-  $("#fullpage").fullpage({
-    scrollBar: true,
-    responsiveWidth: 100,
-    navigation: true,
-    navigationTooltips: ["Лікування зубів", "Ортодонтія", "Відбілювання зубів", "Гігієна зубів", "Протезування"],
-    anchors: ["likZub", "ortho", "vidZub", "gigZub", "protez"],
-    menu: "#table",
-    fitToSection: true,
+  //$("#fullpage").fullpage({
+  //  scrollBar: true,
+  //  responsiveWidth: 100,
+  //  navigation: true,
+  //  navigationTooltips: ["Лікування зубів", "Ортодонтія", "Відбілювання зубів", "Гігієна зубів", "Протезування"],
+  //  anchors: ["likZub", "ortho", "vidZub", "gigZub", "protez"],
+  //  menu: "#table",
+  //  fitToSection: true,
 
-    afterLoad: function (anchorLink, index) {
-      var loadedSection = $(this);
+  //  afterLoad: function (anchorLink, index) {
+  //    var loadedSection = $(this);
 
-      //using index
-      if (index == 1) {
-        /* add opacity to arrow */
-        $(".fa-chevron-down").each(function () {
-          $(this).css("opacity", "1");
-        });
-        $(".header-links a").each(function () {
-          $(this).css("color", "black");
-        });
-        $(".header-links").css("background-color", "transparent");
-      } else if (index != 1) {
-        $(".header-links a").each(function () {
-          $(this).css("color", "black");
-        });
-        $(".header-links").css("background-color", "transparent");
-      }
+  //    //using index
+  //    if (index == 1) {
+  //      /* add opacity to arrow */
+  //      $(".fa-chevron-down").each(function () {
+  //        $(this).css("opacity", "1");
+  //      });
+  //      $(".header-links a").each(function () {
+  //        $(this).css("color", "black");
+  //      });
+  //      $(".header-links").css("background-color", "transparent");
+  //    } else if (index != 1) {
+  //      $(".header-links a").each(function () {
+  //        $(this).css("color", "black");
+  //      });
+  //      $(".header-links").css("background-color", "transparent");
+  //    }
 
-      //using index
-      if (index == 2) {
-        /* animate skill bars */
-        $(".skillbar").each(function () {
-          $(this)
-            .find(".skillbar-bar")
-            .animate(
-              {
-                width: $(this).attr("data-percent")
-              },
-              2500
-            );
-        });
-      }
-    }
-  });
+  //    //using index
+  //    if (index == 2) {
+  //      /* animate skill bars */
+  //      $(".skillbar").each(function () {
+  //        $(this)
+  //          .find(".skillbar-bar")
+  //          .animate(
+  //            {
+  //              width: $(this).attr("data-percent")
+  //            },
+  //            2500
+  //          );
+  //      });
+  //    }
+  //  }
+  //});
 
-  // move section down one
-  $(document).on("click", "#moveDown", function () {
-    $.fn.fullpage.moveSectionDown();
-  });
-  // fullpage.js link navigation
-  $(document).on("click", "#mainPage", function () {
-    $.fn.fullpage.moveTo(0);
-  });
-  // fullpage.js link navigation
-  $(document).on("click", "#skills", function () {
-    $.fn.fullpage.moveTo(2);
-  });
+  //// move section down one
+  //$(document).on("click", "#moveDown", function () {
+  //  $.fn.fullpage.moveSectionDown();
+  //});
+  //// fullpage.js link navigation
+  //$(document).on("click", "#mainPage", function () {
+  //  $.fn.fullpage.moveTo(0);
+  //});
+  //// fullpage.js link navigation
+  //$(document).on("click", "#skills", function () {
+  //  $.fn.fullpage.moveTo(2);
+  //});
 
-  $(document).on("click", "#projects", function () {
-    $.fn.fullpage.moveTo(3);
-  });
+  //$(document).on("click", "#projects", function () {
+  //  $.fn.fullpage.moveTo(3);
+  //});
 
-  $(document).on("click", "#contact", function () {
-    $.fn.fullpage.moveTo(4);
-  });
+  //$(document).on("click", "#contact", function () {
+  //  $.fn.fullpage.moveTo(4);
+  //});
 
   // smooth scrolling
-  $(function () {
-    $("a[href*=#]:not([href=#])").click(function () {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          $("html,body").animate(
-            {
-              scrollTop: target.offset().top
-            },
-            700
-          );
-          return false;
-        }
-      }
-    });
-  });
+  // $(function () {
+  //   $("a[href*=#]:not([href=#])").click(function () {
+  //     if (
+  //       location.pathname.replace(/^\//, "") ==
+  //         this.pathname.replace(/^\//, "") &&
+  //       location.hostname == this.hostname
+  //     ) {
+  //       var target = $(this.hash);
+  //       target = target.length
+  //         ? target
+  //         : $("[name=" + this.hash.slice(1) + "]");
+  //       if (target.length) {
+  //         $("html,body").animate(
+  //           {
+  //             scrollTop: target.offset().top
+  //           },
+  //           700
+  //         );
+  //         return false;
+  //       }
+  //     }
+  //   });
+  // });
 
   //ajax form
   $(function () {
