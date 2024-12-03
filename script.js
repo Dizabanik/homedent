@@ -25,8 +25,43 @@ function next_photo(){
 	photoPrev = document.getElementById("doc"+curPhoto);
 	photoPrev.style.display = 'flex';
 }
+
+function sendEmail() {
+	var isChecked = document.getElementById("pol-konf-acc").checked;
+	if(isChecked == false){
+		return false;
+	}
+	nameM = document.getElementById('cuName').value;
+	phoneM = document.getElementById('cuTelNum').value;
+	messageM = document.getElementById('cuMessage').value;
+	if(nameM == null || nameM == "" || phoneM == null || phoneM == ""){
+		return false;
+	}
+	if(messageM == null){
+		messageM = "";
+	}
+	emailjs.send("service_x5q7hmp","template_es314z6",{
+			name: nameM,
+			phone: phoneM,
+			message: messageM,
+		}).then(
+	  (response) => {
+	    document.getElementById('submitTxt').value = "Ваше повідомлення надіслано, дякуємо!";
+			setTimeout(() => {
+				document.getElementById('submitTxt').value = "Залишити заявку";
+			}, 3000);	  },
+	  (error) => {
+	    console.log('FAILED...', error);
+	  },
+	);
+
+}
+
 $(document).ready(function () {
 	photoPrev = document.getElementById("doc1");
+	emailjs.init({
+		publicKey: "VXfRnDzKDF-iwuyrT",
+	});
   // typing animation
   (function ($) {
     $.fn.writeText = function (content) {
@@ -107,8 +142,8 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 100,
     navigation: true,
-    navigationTooltips: ["головна", "о нас", "послуги", "лікарі", "відгуки", "контакт"],
-    anchors: ["home", "about", "portfolio", "doctors", "reviews", "contact"],
+    navigationTooltips: ["головна", "о нас", "послуги", "лікарі", "відгуки", "напишіть нам", "контакт"],
+    anchors: ["home", "about", "portfolio", "doctors", "reviews", "write", "contact"],
     menu: "#myMenu",
     fitToSection: true,
 
