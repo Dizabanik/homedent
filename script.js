@@ -46,10 +46,10 @@ function sendEmail() {
 			message: messageM,
 		}).then(
 	  (response) => {
-	    document.getElementById('submitTxt').value = "Ваше повідомлення надіслано, дякуємо!";
-			setTimeout(() => {
-				document.getElementById('submitTxt').value = "Залишити заявку";
-			}, 3000);	  },
+	    document.getElementById('form').style.display = "none";
+		document.getElementById('qsTN').style.display = "none";
+		document.getElementById('toSHOFF').style.display = "block";
+	  },
 	  (error) => {
 	    console.log('FAILED...', error);
 	  },
